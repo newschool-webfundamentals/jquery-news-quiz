@@ -4,16 +4,19 @@ $(document).ready(function(){
   $(".answer").on("click", function() {
     console.log("I am clicked");
 
+    //Removes the blue color from the clicked answer
     $(this).removeClass("bg-info");
 
-    if ($(this).hasClass("correct")) {
+    //the answer has the class of correct
+    if () {
+      //add the class 'bg-succss' to the clicked answer
       $(this).addClass("bg-success");
     } else {
-      $(this).addClass("bg-danger");
-      var answers = $(this).parents(".answers-container");
-      var correct = answers.find(".correct")
-      correct.removeClass("bg-info");
-      correct.addClass("bg-success");
+      //add the class 'bg-danger' to the clicked answer
+      //find the parent 'answers-container' of the clicked element
+      //find the 'correct' answer within the answers container
+      //remove the class 'bg-info' from the correct answer
+      //add the class 'bg-success' to the correct answer
     }
   });
 });
